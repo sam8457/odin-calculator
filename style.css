@@ -1,0 +1,93 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
+    background-color: rgb(255, 255, 245);
+}
+
+
+
+/****** SCREEN ******/
+#screen {
+    margin-bottom: 5%;
+    width: 70%;
+    border: 0.1em solid black;
+    border-radius: 0.25em;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;    
+    background-color: white;
+}
+#screen p{
+    font-size: 200%;
+    padding: 0;
+    margin: 0;
+}
+
+/****** BUTTON PAD ******/
+#pad {
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+    width: 100%;
+    justify-content: center;
+    aspect-ratio: 2;
+    max-height: 800px;
+}
+.button {
+    text-align: center;
+    font-size: 200%;
+    margin: 2.5%;
+    box-sizing: border-box;
+    background-color: rgb(241, 241, 241);
+    border-radius: 0.25em;
+    border: 0.05em solid black;
+}
+.button:hover{
+    background-color: rgb(212, 212, 212);
+}
+
+/* Number Pad */
+#numbers {
+    display: grid;
+    width: 60%;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin-right: 3%;
+}
+#zero {
+    grid-column: 2;
+}
+
+/* Operators Pad */
+#operators {
+    display: grid;
+    width: 40%;
+    height: 75%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr)
+}
+#operators .button{
+    background-color: rgb(254, 255, 170);
+}
+#operators .button:hover{
+    background-color: rgb(231, 233, 150);
+}
+
+/* Min width for the rule to apply */
+@media screen and (min-width: 800px) {
+    /* body {
+        width: 45em;
+        height: 30em;
+    } */
+    
+    #pad {
+        height: 22.5em;
+        width: 45em;
+    }
+}
